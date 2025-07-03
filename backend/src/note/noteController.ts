@@ -32,3 +32,5 @@ const createNote = async (req:Request,res:Response, next:NextFunction)=>{
 
 
 }
+
+export {createNote}
