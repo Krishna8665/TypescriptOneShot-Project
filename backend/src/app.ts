@@ -1,13 +1,15 @@
 import express from 'express'
 import globalErrorHandler from './middlewares/globalErrorHandler'
 import noteRoute from './note/noteRoute'
+import envConfig from './config/config'
+import cors from 'cors'
 const app = express()
 //PARSE INCOMING JSON TO HANDLE UNDEFINED ERROR
 app.use(express.json())
 
 //CORS CONFIGURATION
 app.use(cors({
-    origin : env.config.frontendUrl
+    origin : envConfig.frontendUrl
 }))
 
 
