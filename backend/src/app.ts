@@ -9,11 +9,11 @@ app.use(express.json())
 
 //CORS CONFIGURATION
 app.use(cors({
-    origin : envConfig.frontendUrl
+    origin: envConfig.frontendUrl
 }))
 
 
-app.use("/api/notes",noteRoute) // /api/notes/
+app.use("/api/notes", noteRoute) // /api/notes/
 
 
 
