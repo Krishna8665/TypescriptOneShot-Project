@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+
 import Notecard from "./components/NoteCard";
 
 export default async function Home() {
@@ -6,8 +6,10 @@ export default async function Home() {
   if(!response.ok){
     throw new Error('Error occured while fetching')
   }
+  const {data:notes} = await response.json()
+  console.log(notes)
   return(
 
-    <Notecard />
-  )
+    <Notecard notes = {notes}/>
+  );
 }

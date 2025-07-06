@@ -9,7 +9,7 @@ const connectToDatabase = async () => {
         })
         await mongoose.connect(envConfig.mongodbString as string)
     } catch (error) {
-        console.log("failed  to connect db")
+        console.log("failed  to connect db",error)
         process.exit(1)
     }
 }

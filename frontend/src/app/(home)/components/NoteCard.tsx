@@ -1,6 +1,7 @@
+import { Note } from "@/app/types";
 import React from "react";
 
-const Notecard = () => {
+const Notecard = ({notes}:{notes: Note[]}) => {
     return(
  <div className="flex px-4 py-3 mt-[65px]">
   <div className="max-w-sm rounded overflow-hidden shadow-lg">
